@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="scriptProfile.js"></script>
+    <title>HANNUN - Ejercicio 1</title>
+  </head>
+  <body>
+    <div class="homepage">
+      <div class="header">
+        <div class="header__siteImg">
+          <a href="https://hannun.com/"><img src="src/hannun-logo.png" /></a>
+        </div>
+        <div class="login">
+          <div id="openProfile" class="login__button">
+            <img src="src/profile/tw-loggedUser.png" />
+          </div>
+        </div>
+      </div>
+      <div class="background">
+        <div id="profile" class="listMenu">
+          <div class="listMenu__message">
+            <!-- prettier-ignore -->
+            <span id="listMenu__span"></span>
+          </div>
+          <!-- prettier-ignore -->
+          <ul class="listMenu__ul">
+              <a id="HannunRewards" class="listMenu__a"><li class="listMenu__li"><img class="listMenu__img" src="src/profile/tw-triangle.png">Hannun rewards</li></a>
+              <a id="Perfil"        class="listMenu__a" href="#"><li class="listMenu__li"><img class="listMenu__img" src="src/profile/tw-user.png">Perfil</li></a>
+              <a id="Pedidos"       class="listMenu__a" href="#"><li class="listMenu__li"><img class="listMenu__img" src="src/profile/tw-book.png">Pedidos</li></a>
+              <a id="Direcciones"   class="listMenu__a" href="#"><li class="listMenu__li"><img class="listMenu__img" src="src/profile/tw-home.png">Direcciones</li></a>
+              <a id="Newsletter"    class="listMenu__a" href="#"><li class="listMenu__li"><img class="listMenu__img" src="src/profile/tw-letter.png">Newsletter</li></a>
+              <a id="Salir"         class="listMenu__a" href="#"><li class="listMenu__li"><img class="listMenu__img" src="src/profile/tw-turnOff.png">Salir</li></a>
+          </ul>
+          </div>
+          <p id="welcomeUser"></p>
+        </div>        
+        <div id="loader"></div>
+      </div>
+    </div>
+  </body>
+</html>
