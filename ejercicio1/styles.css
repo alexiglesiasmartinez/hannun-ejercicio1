@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --first-color: black;
+  --second-color: white;
+  --body-font: "Spartan", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body * {
+  font-family: var(--body-font);
+}
+
+body {
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+
+/* #################### 1.- WELCOME PAGE #################### */
+
+.homepage {
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 10%;
+}
+
+.header .header__siteImg img {
+  height: 80px;
+  width: 300px;
+}
+
+.header .login .login__button {
+  cursor: pointer;
+}
+
+.header .login .login__button img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  transition: all 0.1s ease-in-out;
+}
+
+.header .login .login__button img:hover {
+  margin-top: -10px;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.background p {
+  font-size: 25px;
+}
+
+/* #################### 2.- POPUP #################### */
+
+#myForm {
+  display: none;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeInAnimation 500ms ease-in-out;
+}
+
+.loginPopup {
+  width: 320px;
+  height: 420px;
+  background: #000;
+  color: var(--second-color);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+  transition: all 0.1s ease-in-out;
+}
+
+.loginPopup .loginPopup__avatar {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.loginPopup h1 {
+  margin: 0;
+  padding: 0 0 60px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.loginPopup label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+  font-size: 18px;
+}
+
+.loginPopup input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.loginPopup input[type="text"],
+.loginPopup input[type="password"] {
+  border: none;
+  border-bottom: 1px solid var(--second-color);
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: var(--second-color);
+  font-size: 16px;
+}
+
+.loginPopup #sendLogin {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: white;
+  color: var(--first-color);
+  font-size: 18px;
+  border-radius: 20px;
+  transition: all 0.1s ease-in-out;
+  margin-top: 10px;
+}
+
+.loginPopup #sendLogin:hover {
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.loginPopup a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+#error {
+  display: none;
+  font-size: 15px;
+  color: red;
+  padding-bottom: 25px;
+}
+
+/* #################### 3.- PROFILE #################### */
+
+#welcome {
+  text-align: center;
+}
+
+#profile {
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#profile.showProfile {
+  visibility: visible;
+  opacity: 1;
+  bottom: 10%; /* 1488 */
+}
+
+.listMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  right: 25px;
+  top: 15%;
+  width: 350px;
+  height: 460px;
+  background-color: var(--second-color);
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 25px;
+}
+
+.listMenu::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  width: 31px;
+  height: 20px;
+  background-color: var(--second-color);
+  transform: rotate(45deg);
+}
+
+.listMenu__span {
+  color: var(--first-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.listMenu__b {
+  padding-left: 5px !important;
+}
+
+.listMenu__ul {
+  width: 100%;
+}
+
+.listMenu__a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  text-decoration: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.1s ease-in-out;
+}
+
+.listMenu__a:hover {
+  margin-left: 10px;
+}
+
+.listMenu__img {
+  display: inline-block;
+  width: 40px;
+  padding-right: 10px;
+}
+
+.listMenu__li {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  color: var(--first-color);
+  padding-top: 5px !important;
+}
+
+.listMenu__li:first-child {
+  padding-top: 0px;
+}
+
+.listMenu__li:last-child {
+  padding-bottom: 0px;
+}
+
+/* #################### 4.- LOGIN LOADER #################### */
+
+.loader {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader__disappear {
+  animation: vanishLoader 1s forwards;
+}
+
+@keyframes vanishLoader {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* #################### 5.- MEDIQUERIES #################### */
+
+/* SMARTPHONE */
+
+@media only screen and (min-device-width: 280px) and (max-device-width: 480px) {
+  .header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .header .login .login__button img {
+    margin-right: 0px;
+  }
+
+  .loginPopup img {
+    display: none;
+  }
+
+  .login {
+    margin-top: 20px;
+  }
+
+  .loginPopup {
+    height: 350px;
+  }
+
+  #welcome {
+    font-size: 20px;
+  }
+
+  #profile.showProfile {
+    visibility: visible;
+    opacity: 1;
+    top: 40%; /* 1488 */
+  }
+
+  .listMenu {
+    width: 310px;
+    height: 370px;
+    font-size: 13px;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .listMenu__span {
+    padding-bottom: 22px;
+  }
+
+  .listMenu__img {
+    width: 35px;
+  }
+
+  .listMenu::before {
+    top: 10px;
+  }
+
+  .header .login .login__button img:hover,
+  .loginPopup #sendLogin:hover,
+  .listMenu__a:hover {
+    margin-top: 0px;
+  }
+}
+
+/* TABLET */
+@media (min-width: 480px) and (max-width: 1080px) {
+  .header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .header .login .login__button img {
+    margin-right: 0px;
+  }
+
+  .loginPopup img {
+    display: none;
+  }
+
+  .header__siteImg {
+    padding-bottom: 20px;
+  }
+
+  .login {
+    padding-bottom: 20px;
+  }
+
+  #profile.showProfile {
+    visibility: visible;
+    opacity: 1;
+    top: 10%; /* 1488 */
+  }
+
+  .listMenu {
+    bottom: 30%;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .listMenu__span {
+    padding-bottom: 40px;
+  }
+
+  .listMenu__img {
+    width: 35px;
+  }
+
+  .listMenu::before {
+    top: 10px;
+  }
+
+  .header .login .login__button img:hover,
+  .loginPopup #sendLogin:hover,
+  .listMenu__a:hover {
+    margin-top: 0px;
+  }
+}
+
+/* PC */
+
+@media (min-width: 1080px) {
+  .header {
+    padding-top: 50px;
+  }
+}
